@@ -10,3 +10,7 @@ Welcome to the AI Agents Workflow Automation project! This open-source initiativ
 - **Robust Documentation**: Detailed guides and references to help you get started and contribute.
 
 Join us in revolutionizing enterprise workflow automation!
+
+## Resources
+[Autogen](https://github.com/microsoft/autogen)  
+[CrewAI](https://github.com/joaomdmoura/crewAI)  
