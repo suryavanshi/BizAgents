@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+langgraph
+openai
+weaviate-client
+sendgrid
+python-dotenv
+psycopg2-binary
