@@ -1,0 +1,29 @@
+version: '3.8'
+services:
+  backend:
+    build: ./apps/backend
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+      - weaviate
+  frontend:
+    build: ./apps/frontend
+    ports:
+      - "3000:3000"
+  db:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: mktai
+      POSTGRES_PASSWORD: mktai
+      POSTGRES_DB: mktai
+    ports:
+      - "5432:5432"
+  weaviate:
+    image: semitechnologies/weaviate:1.24.8
+    environment:
+      QUERY_DEFAULTS_LIMIT: 20
+      AUTHENTICATION_ANONYMOUS_ACCESS_ENABLED: 'true'
+      PERSISTENCE_DATA_PATH: '/var/lib/weaviate'
+    ports:
+      - '8080:8080'
